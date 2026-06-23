@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM|CODES</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addlanguage(langName){
+        const li=document.createElement('li');
+        li.innerHTML=`${langName}`;
+        document.querySelector('.language').appendChild(li);
+    }
+    addlanguage("python");
+    addlanguage("typescript");
+    function addoptilanguage(langName){
+        const li=document.createElement('li');
+        const addtxt=document.createTextNode(langName);
+        li.appendChild(addtxt);
+        document.querySelector('.language').appendChild(li);
+    }
+    addoptilanguage("java programming");
+
+
+
+    //EDIT 
+    const Secondlang=document.querySelector("li:nth-child(2)")
+    //not recommended
+    // Secondlang.innerHTML="Mojo"
+    const newli=document.createElement('li')
+    newli.textContent="MoJo"
+    Secondlang.replaceWith(newli)
+    //edit
+    // const firstleng=document.querySelector("li:nth-child(1)")
+    // const nli=document.createElement('li');
+    // nli.textContent="Rohan";
+    // firstleng.replaceWith(nli)
+    //edit
+    const firstleng=document.querySelector("li:first-child")
+    firstleng.outerHTML='<li>TYpescript</li>'
+
+    //remove
+    const lastlang=document.querySelector('li:last-child')
+    lastlang.remove()
+
+</script>
+</html>
