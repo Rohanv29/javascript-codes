@@ -10,9 +10,9 @@
 // let somenum=33
 // let str=String(somenum)
 // console.log(typeof str);
-//*************** operations*********************** */
+//*************** operations***********************/
 let value=3
-let negval=-value
+let negval=-value 
 // console.log(negval);
 
 console.log(2+2);
