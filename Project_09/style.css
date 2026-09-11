@@ -1,0 +1,946 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #08091d;
+    --card: #10132e;
+    --purple: #9b7cff;
+    --pink: #ff4f9a;
+    --red: #ff4567;
+    --yellow: #ffd45c;
+    --white: #ffffff;
+    --text: #d9dcff;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background: var(--bg);
+    color: white;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+.page {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ================= BACKGROUND ================= */
+
+.background {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+
+    background:
+        radial-gradient(circle at 20% 20%, #261a50 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, #33152e 0%, transparent 30%),
+        linear-gradient(135deg, #08091d, #11132e);
+}
+
+.star {
+    position: absolute;
+    color: #a998ff;
+    font-size: 24px;
+    animation: twinkle 2s infinite alternate;
+}
+
+.star1 {
+    top: 15%;
+    left: 10%;
+}
+
+.star2 {
+    top: 30%;
+    right: 15%;
+}
+
+.star3 {
+    bottom: 20%;
+    left: 20%;
+}
+
+.star4 {
+    bottom: 10%;
+    right: 25%;
+}
+
+.emoji {
+    position: absolute;
+    opacity: 0.2;
+    font-size: 35px;
+    animation: float 5s infinite ease-in-out;
+}
+
+.e1 {
+    top: 20%;
+    left: 5%;
+}
+
+.e2 {
+    top: 60%;
+    right: 5%;
+}
+
+.e3 {
+    bottom: 15%;
+    left: 8%;
+}
+
+.e4 {
+    top: 10%;
+    right: 8%;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+/* ================= HOME ================= */
+
+.notice {
+    background: linear-gradient(90deg, #ff405d, #ff5570);
+    padding: 15px 45px;
+    border-radius: 50px;
+
+    font-family: "Baloo 2", cursive;
+    font-size: clamp(22px, 4vw, 38px);
+    font-weight: 800;
+
+    box-shadow:
+        0 0 20px rgba(255, 65, 100, 0.5),
+        inset 0 -4px 0 rgba(0, 0, 0, 0.15);
+
+    animation: slideDown 0.8s ease;
+}
+
+.intro {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.small-text {
+    color: #b6aaff;
+    font-size: 17px;
+}
+
+.intro h1 {
+    font-family: "Baloo 2", cursive;
+    font-size: clamp(50px, 8vw, 90px);
+    line-height: 1;
+    margin: 8px 0;
+
+    background: linear-gradient(
+        90deg,
+        #ff91bd,
+        #ffffff,
+        #a889ff
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.intro h1 span {
+    color: white;
+}
+
+.subtitle {
+    font-family: "Baloo 2", cursive;
+    font-size: clamp(20px, 4vw, 30px);
+    color: #eeeaff;
+}
+
+.confess {
+    color: #aeb2e8;
+    margin-top: 8px;
+}
+
+
+/* ================= CASE FILE ================= */
+
+.case-file {
+    width: min(900px, 95%);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(24, 28, 63, 0.95),
+            rgba(12, 16, 40, 0.98)
+        );
+
+    border: 2px solid #545b98;
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(120, 100, 255, 0.15);
+
+    animation: rise 1s ease;
+}
+
+.case-title span {
+    color: #aeb5e8;
+    font-size: 13px;
+    border: 1px solid #626997;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.case-title h2 {
+    font-family: "Baloo 2", cursive;
+    font-size: clamp(25px, 5vw, 40px);
+    color: #d7dcff;
+    margin-top: 10px;
+    border-bottom: 2px solid #515982;
+    padding-bottom: 12px;
+}
+
+.case-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.case-details {
+    flex: 1;
+}
+
+.detail {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.icon {
+    font-size: 25px;
+    width: 40px;
+}
+
+.detail small {
+    display: block;
+    color: #9da5d5;
+    font-size: 12px;
+}
+
+.detail strong {
+    display: block;
+    color: white;
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+.detail .danger {
+    color: #ff5574;
+}
+
+
+/* GDG photo */
+
+.gdg-photo {
+    width: 190px;
+    text-align: center;
+}
+
+.photo {
+    height: 150px;
+    background: linear-gradient(135deg, #2768ff, #6626c9);
+    border: 8px solid white;
+    transform: rotate(3deg);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.gdg-logo {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.photo b {
+    font-size: 30px;
+}
+
+.gdg-photo p {
+    color: #b9bcdf;
+    margin-top: 15px;
+    transform: rotate(-2deg);
+}
+
+
+/* Investigate button */
+
+.investigate-btn {
+    display: block;
+    margin: 25px auto 5px;
+
+    padding: 15px 35px;
+    border-radius: 50px;
+
+    background: linear-gradient(
+        90deg,
+        #ffd35a,
+        #ffdf78
+    );
+
+    color: #17182e;
+
+    font-size: 17px;
+    font-weight: 800;
+
+    box-shadow: 0 10px 30px rgba(255, 210, 80, 0.25);
+
+    transition: 0.3s;
+}
+
+.investigate-btn:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(255, 210, 80, 0.4);
+}
+
+.trust {
+    text-align: center;
+    color: #8c91bd;
+    font-size: 13px;
+}
+
+
+/* Side notes */
+
+.side-note {
+    position: absolute;
+    background: #fff0a5;
+    color: #29243a;
+    padding: 18px;
+    font-family: "Baloo 2", cursive;
+    font-weight: 700;
+    transform: rotate(-5deg);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.left-note {
+    left: 3%;
+    top: 30%;
+}
+
+.right-note {
+    right: 3%;
+    top: 50%;
+    background: #ff9bc5;
+    transform: rotate(5deg);
+}
+
+footer {
+    margin-top: 25px;
+    color: #9da2d5;
+}
+
+
+/* ================= OTHER PAGES ================= */
+
+.reveal-card,
+.apology-card,
+.excuse-card,
+.forgive-card,
+.success-card {
+    width: min(750px, 95%);
+    text-align: center;
+
+    background: rgba(17, 20, 48, 0.95);
+    border: 1px solid #4b528c;
+
+    border-radius: 25px;
+    padding: 45px 35px;
+
+    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.5);
+
+    animation: rise 0.7s ease;
+}
+
+.warning {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 2px solid #ff496d;
+    color: #ff5e7d;
+    border-radius: 30px;
+    font-weight: 800;
+}
+
+.reveal-card h1 {
+    font-family: "Baloo 2", cursive;
+    font-size: clamp(40px, 7vw, 65px);
+    margin: 20px 0;
+}
+
+.tiny {
+    color: #aeb2dd;
+}
+
+.crime-box {
+    background: rgba(255, 68, 105, 0.08);
+    border: 1px solid #773348;
+    padding: 25px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.crime-box p {
+    color: #aaaed0;
+}
+
+.crime-box h2 {
+    color: #ff6380;
+    margin-top: 10px;
+    font-family: "Baloo 2", cursive;
+    font-size: clamp(25px, 5vw, 42px);
+}
+
+.reaction {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 40px;
+    margin: 25px;
+}
+
+.reaction span {
+    animation: bounce 1s infinite alternate;
+}
+
+.reaction span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.reaction span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.reaction span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.explanation {
+    color: #b9bddc;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* Buttons */
+
+.main-btn {
+    padding: 14px 28px;
+    background: linear-gradient(90deg, #8b72ff, #c074ff);
+    color: white;
+
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 16px;
+
+    box-shadow: 0 10px 25px rgba(130, 100, 255, 0.25);
+
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(130, 100, 255, 0.4);
+}
+
+
+/* ================= APOLOGY ================= */
+
+.envelope {
+    font-size: 55px;
+}
+
+.apology-card h1 {
+    font-family: "Baloo 2", cursive;
+    font-size: clamp(35px, 6vw, 55px);
+    margin: 10px 0 25px;
+}
+
+.letter {
+    background: #f7f2df;
+    color: #302d3c;
+    text-align: left;
+
+    padding: 30px;
+    border-radius: 10px;
+
+    line-height: 1.7;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.letter p {
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #55506a;
+}
+
+.letter h2 {
+    text-align: center;
+    color: #ef4265;
+    font-family: "Baloo 2", cursive;
+    font-size: 30px;
+}
+
+.promises {
+    margin: 20px 0;
+    padding: 15px;
+    background: #ebe4ce;
+    border-radius: 10px;
+}
+
+.promises div {
+    margin: 6px 0;
+}
+
+.signature {
+    text-align: right;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+
+/* ================= EXCUSE ================= */
+
+.emoji-big {
+    font-size: 65px;
+}
+
+.excuse-card h1 {
+    font-family: "Baloo 2", cursive;
+    font-size: 50px;
+}
+
+.excuse-card > p {
+    color: #aeb3d8;
+    margin: 10px 0 30px;
+}
+
+.meter {
+    height: 25px;
+    width: 100%;
+    background: #282c4e;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 20px 0 10px;
+}
+
+#meter-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #ff405e,
+        #ffbd54
+    );
+
+    transition: width 2s ease;
+}
+
+#percentage {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.excuse-result {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background: rgba(255, 70, 100, 0.08);
+    border: 1px solid #633347;
+    border-radius: 20px;
+}
+
+.excuse-result h2 {
+    color: #ff637e;
+}
+
+.excuse-result h1 {
+    color: #ff637e;
+}
+
+.hidden-btn {
+    display: none;
+    margin-top: 20px;
+}
+
+
+/* ================= FORGIVENESS ================= */
+
+.thinking {
+    font-size: 60px;
+}
+
+.forgive-card h1 {
+    font-family: "Baloo 2", cursive;
+    font-size: 60px;
+    margin: 5px 0;
+}
+
+.review {
+    color: #aaaed0;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+.forgive-card h2 {
+    font-family: "Baloo 2", cursive;
+    font-size: 35px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    position: relative;
+    min-height: 60px;
+}
+
+#yesBtn,
+#noBtn {
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#yesBtn {
+    background: #71df9b;
+    color: #13251c;
+}
+
+#yesBtn:hover {
+    transform: scale(1.05);
+}
+
+#noBtn {
+    background: #ff5d79;
+    color: white;
+}
+
+#noBtn.moving {
+    position: fixed;
+}
+
+#no-message {
+    margin-top: 25px;
+    color: #ffb6c7;
+    min-height: 25px;
+}
+
+
+/* ================= SUCCESS ================= */
+
+.success-card {
+    position: relative;
+    z-index: 10;
+}
+
+.celebration {
+    font-size: 55px;
+}
+
+.success-card h1 {
+    font-family: "Baloo 2", cursive;
+    font-size: clamp(60px, 10vw, 100px);
+
+    background: linear-gradient(
+        90deg,
+        #ffd75c,
+        #ff79ad,
+        #a17cff
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.success-card h2 {
+    font-family: "Baloo 2", cursive;
+    font-size: 35px;
+}
+
+.forgiven {
+    margin: 20px 0;
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background: rgba(110, 220, 150, 0.1);
+    border: 1px solid #4c9769;
+
+    color: #85e4a8;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.success-card p {
+    color: #c2c5e4;
+    margin: 12px 0;
+}
+
+.final-message {
+    margin: 25px 0;
+    padding: 20px;
+
+    background: #242847;
+    border-radius: 15px;
+
+    color: #e4e5ff;
+    font-weight: 700;
+}
+
+.sorry {
+    color: #ff91b5;
+}
+
+.from {
+    color: #a9aee0 !important;
+}
+
+.restart {
+    margin-top: 25px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: #2d3156;
+    color: #cfd2ff;
+}
+
+
+/* ================= CONFETTI ================= */
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 15px;
+    top: -20px;
+
+    animation: confettiFall 3s linear forwards;
+
+    z-index: 100;
+}
+
+@keyframes confettiFall {
+    to {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+        opacity: 0;
+    }
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .page {
+        padding: 30px 15px;
+    }
+
+    .notice {
+        padding: 10px 22px;
+    }
+
+    .case-file {
+        padding: 20px;
+    }
+
+    .case-content {
+        flex-direction: column;
+    }
+
+    .gdg-photo {
+        margin: auto;
+    }
+
+    .side-note {
+        display: none;
+    }
+
+    .reveal-card,
+    .apology-card,
+    .excuse-card,
+    .forgive-card,
+    .success-card {
+        padding: 30px 20px;
+    }
+
+    .letter {
+        padding: 20px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #yesBtn,
+    #noBtn {
+        width: 90%;
+    }
+
+    .reaction {
+        font-size: 30px;
+        gap: 12px;
+    }
+}
+/* ===============================
+   FRIEND SELECTION
+   =============================== */
+
+.friend-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.friend-btn {
+    padding: 18px 45px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        90deg,
+        #8b72ff,
+        #c074ff
+    );
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    box-shadow:
+        0 10px 30px rgba(130, 100, 255, 0.3);
+
+    transition: 0.3s;
+}
+
+.friend-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+
+    box-shadow:
+        0 15px 40px rgba(130, 100, 255, 0.5);
+}
+
+
+/* Hidden forgiveness question */
+
+#forgiveness-question {
+    margin-top: 30px;
+}
+
+#forgiveness-question h2 {
+    margin: 15px 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .friend-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .friend-btn {
+        width: 80%;
+    }
+
+}

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The GDG Incident | Rohan's Apology</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background decorations -->
+    <div class="background">
+        <span class="star star1">✦</span>
+        <span class="star star2">✦</span>
+        <span class="star star3">✧</span>
+        <span class="star star4">✦</span>
+
+        <span class="emoji e1">😭</span>
+        <span class="emoji e2">💀</span>
+        <span class="emoji e3">🥲</span>
+        <span class="emoji e4">🚨</span>
+    </div>
+
+
+    <!-- HOME PAGE -->
+    <section id="home" class="page active">
+
+        <div class="notice">
+            🚨 &nbsp; IMPORTANT NOTICE &nbsp; 🚨
+        </div>
+
+        <div class="intro">
+            <p class="small-text">This is not a drill... 👀</p>
+
+            <h1>
+                Avika <span>&</span> Kinza...
+            </h1>
+
+            <p class="subtitle">
+                Please don't close this website... 😭
+            </p>
+
+            <p class="confess">
+                I have something to confess...
+            </p>
+        </div>
+
+
+        <!-- Case file -->
+        <div class="case-file">
+
+            <div class="case-title">
+                <span>CASE #001</span>
+                <h2>THE GDG INCIDENT</h2>
+            </div>
+
+            <div class="case-content">
+
+                <div class="case-details">
+
+                    <div class="detail">
+                        <div class="icon">👤</div>
+                        <div>
+                            <small>SUSPECT:</small>
+                            <strong>Rohan Verma</strong>
+                        </div>
+                    </div>
+
+                    <div class="detail">
+                        <div class="icon">👥</div>
+                        <div>
+                            <small>VICTIMS:</small>
+                            <strong>Avika & Kinza</strong>
+                        </div>
+                    </div>
+
+                    <div class="detail">
+                        <div class="icon">⚠️</div>
+                        <div>
+                            <small>CRIME:</small>
+                            <strong>
+                                Going to GDG without informing them 💀
+                            </strong>
+                        </div>
+                    </div>
+
+                    <div class="detail">
+                        <div class="icon">🎯</div>
+                        <div>
+                            <small>STATUS:</small>
+                            <strong class="danger">
+                                APOLOGY REQUIRED 🚨
+                            </strong>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="gdg-photo">
+                    <div class="photo">
+                        <div class="gdg-logo">
+                            &lt;/&gt;
+                        </div>
+                        <b>GDG</b>
+                    </div>
+                    <p>The crime scene 📸</p>
+                </div>
+
+            </div>
+
+            <button class="investigate-btn" onclick="startInvestigation()">
+                🔍 &nbsp; INVESTIGATE THE CASE &nbsp; →
+            </button>
+
+            <p class="trust">
+                (Trust me... it's a long story 😭)
+            </p>
+
+        </div>
+
+
+        <div class="side-note left-note">
+            Best friends...<br>
+            Don't keep secrets 😭<br>
+            <b>(Especially GDG plans!)</b>
+        </div>
+
+        <div class="side-note right-note">
+            Oops... 😬<br>
+            My bad!
+        </div>
+
+
+        <footer>
+            A message from <b>Rohan Verma</b>
+        </footer>
+
+    </section>
+
+
+
+    <!-- CRIME REVEAL -->
+    <section id="reveal" class="page hidden">
+
+        <div class="reveal-card">
+
+            <div class="warning">🚨 CASE REVEALED 🚨</div>
+
+            <p class="tiny">Okay... I admit it.</p>
+
+            <h1>
+                I COMMITTED<br>
+                A SERIOUS CRIME. 💀
+            </h1>
+
+            <div class="crime-box">
+                <p>The crime was...</p>
+
+                <h2>
+                    I WENT TO GDG<br>
+                    WITHOUT TELLING YOU BOTH. 😭
+                </h2>
+            </div>
+
+            <div class="reaction">
+                <span>😐</span>
+                <span>😶</span>
+                <span>💀</span>
+                <span>😭</span>
+            </div>
+
+            <p class="explanation">
+                Yes... I know.<br>
+                You have every right to judge me. 😂
+            </p>
+
+            <button onclick="showApology()" class="main-btn">
+                Okay Rohan... Explain Yourself 😤
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- APOLOGY -->
+    <section id="apology" class="page hidden">
+
+        <div class="apology-card">
+
+            <div class="envelope">💌</div>
+
+            <h1>Okay... Seriously, I'm Sorry. 🥲</h1>
+
+            <div class="letter">
+
+                <p>
+                    <b>Avika & Kinza,</b>
+                </p>
+
+                <p>
+                    I know I messed up.
+                </p>
+
+                <p>
+                    I should have told you both before going to GDG
+                    instead of just going without saying anything.
+                </p>
+
+                <p>
+                    I didn't mean to make you feel left out or ignored,
+                    but honestly... I should have communicated properly.
+                </p>
+
+                <p class="highlight">
+                    So, from the bottom of my very guilty heart:
+                </p>
+
+                <h2>
+                    I'M GENUINELY SORRY. 🙏
+                </h2>
+
+                <p>
+                    Next time, I'll tell you both before making plans.
+                </p>
+
+                <div class="promises">
+                    <div>❌ No secret missions</div>
+                    <div>❌ No disappearing acts</div>
+                    <div>❌ No more GDG surprises</div>
+                    <div>✅ Proper communication</div>
+                </div>
+
+                <p class="signature">
+                    — Rohan Verma
+                </p>
+
+            </div>
+
+            <button onclick="showExcuse()" class="main-btn">
+                Check My Excuse 😂
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- EXCUSE METER -->
+    <section id="excuse" class="page hidden">
+
+        <div class="excuse-card">
+
+            <div class="emoji-big">🧠</div>
+
+            <h1>
+                THE EXCUSE METER
+            </h1>
+
+            <p>
+                Let's see how good my excuse actually is...
+            </p>
+
+            <div class="meter">
+                <div id="meter-fill"></div>
+            </div>
+
+            <div id="percentage">
+                0%
+            </div>
+
+            <button onclick="revealExcuse()" id="excuse-btn" class="main-btn">
+                🔎 Reveal My Excuse
+            </button>
+
+            <div id="excuse-result" class="excuse-result">
+
+                <h2>
+                    Excuse Strength: 2% 💀
+                </h2>
+
+                <p>
+                    Yeah... I don't have a good excuse. 😭
+                </p>
+
+                <p>
+                    That's why I'm just saying...
+                </p>
+
+                <h1>
+                    SORRY! 🙏
+                </h1>
+
+            </div>
+
+            <button
+                id="continue-btn"
+                onclick="showForgiveness()"
+                class="main-btn hidden-btn">
+                Okay, that's actually honest 😂
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FORGIVENESS -->
+<section id="forgive" class="page hidden">
+
+    <div class="forgive-card">
+
+        <div class="thinking">🤔</div>
+
+        <p class="small-text">
+            FINAL DECISION REQUIRED
+        </p>
+
+        <h1>
+            Wait... Who Are You? 👀
+        </h1>
+
+        <p class="review">
+            Before making the final decision,<br>
+            I need to know which bestie is judging me. 😂
+        </p>
+
+        <!-- NAME SELECTION -->
+        <div id="name-selection">
+
+            <div class="friend-buttons">
+
+                <button
+                    class="friend-btn"
+                    onclick="selectFriend('Avika')">
+                    👩🏻 Avika
+                </button>
+
+                <button
+                    class="friend-btn"
+                    onclick="selectFriend('Kinza')">
+                    👩🏻 Kinza
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORGIVENESS QUESTION -->
+        <div id="forgiveness-question" class="hidden">
+
+            <h2>
+                <span id="friend-name"></span>...
+            </h2>
+
+            <p class="review">
+                After reviewing the evidence...<br>
+                Considering the crime...<br>
+                Considering my extremely questionable decision-making skills... 😂
+            </p>
+
+            <h2>
+                Will you forgive me? 🥺
+            </h2>
+
+            <div class="buttons">
+
+                <button
+                    id="yesBtn"
+                    onclick="forgiveMe()">
+                    YES, YOU'RE FORGIVEN 😤
+                </button>
+
+                <button
+                    id="noBtn"
+                    onclick="moveNoButton()">
+                    NO 😈
+                </button>
+
+            </div>
+
+            <p id="no-message">
+                Choose wisely... 👀
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <!-- SURPRISE -->
+    <section id="success" class="page hidden">
+
+        <div class="success-card">
+
+            <div class="celebration">
+                🎉 🥳 🎊
+            </div>
+
+            <h1>
+                YAAAAAY!
+            </h1>
+
+            <h2>
+                AVIKA & KINZA
+            </h2>
+
+            <div class="forgiven">
+                HAVE OFFICIALLY<br>
+                FORGIVEN ROHAN! 🥳
+            </div>
+
+            <p>
+                Thank you both. 🫂
+            </p>
+
+            <p>
+                I promise I'll communicate next time.
+            </p>
+
+            <div class="final-message">
+                Friends don't let friends find out<br>
+                about GDG plans AFTER the event. 😂
+            </div>
+
+            <h2 class="sorry">
+                Sorry again! 🙏
+            </h2>
+
+            <p class="from">
+                — Rohan Verma
+            </p>
+
+            <button onclick="location.reload()" class="restart">
+                🔄 Replay the apology
+            </button>
+
+        </div>
+
+        <div id="confetti-container"></div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
