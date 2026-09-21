@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript,DOM</h2>
+    <p>Finding Html by Tagname</p>
+    <p>This example demonstrates the <b>getElementByTagname/b> method</p>
+    <p id="demo"></p>
+    <script>
+        const ele=document.getElementsByTagName("p");
+        document.getElementById("demo").innerHTML='The'+ele[0].innerHTML;
+    </script>
+
+</body>
+</html>

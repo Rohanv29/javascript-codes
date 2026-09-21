@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .box{
+                position: absolute;
+                width: 100px;
+                height: 100px;
+            }
+            .red-box{
+                background-color: red;
+                top: 20px;
+                left: 20px;
+                z-index: 1;
+            }
+            .greenyellow-box{
+                background-color: greenyellow;
+                top: 40px;
+                left: 40px;
+                z-index: 2;
+            }
+            .pink-box{
+                background-color: pink;
+                top: 60px;
+                left: 60px;
+                z-index: 3;
+            }
+            @media (max-width: 600px) {
+        .box {
+        position: static;
+        display: block;
+        margin: 10px;
+    }
+}
+        </style>
+    </head>
+    <body bgcolor="black">
+        <div class ="box red-box">Red</div>
+        <div class ="box greenyellow-box">greenyellow</div>
+        <div class ="box pink-box">pink</div>
+    </body>
+</html>

@@ -32,37 +32,37 @@
 // };
 
 // console.log(upper23(names));
-// let laptops = [
-//     {
-//         brand: "HP",
-//         model: "Pavilion 15",
-//         price: 65000,
-//         ram: "16GB",
-//         storage: "512GB SSD"
-//     },
-//     {
-//         brand: "Dell",
-//         model: "Inspiron 15",
-//         price: 62000,
-//         ram: "16GB",
-//         storage: "512GB SSD"
-//     },
-//     {
-//         brand: "Lenovo",
-//         model: "IdeaPad Slim 5",
-//         price: 58000,
-//         ram: "16GB",
-//         storage: "512GB SSD"
-//     }
-// ];
-// const fillprod=(laptops)=>{
-//     let res=[]
-//     laptops.forEach(element => {
-//         res.push(element.price *0.1)
+let laptops = [
+    {
+        brand: "HP",
+        model: "Pavilion 15",
+        price: 65000,
+        ram: "16GB",
+        storage: "512GB SSD"
+    },
+    {
+        brand: "Dell",
+        model: "Inspiron 15",
+        price: 62000,
+        ram: "16GB",
+        storage: "512GB SSD"
+    },
+    {
+        brand: "Lenovo",
+        model: "IdeaPad Slim 5",
+        price: 58000,
+        ram: "16GB",
+        storage: "512GB SSD"
+    }
+];
+const fillprod=(laptops)=>{
+    let res=[]
+    laptops.forEach(element => {
+        res.push(element.price *0.1)
        
-//     });
-//      return res;
-// }
-// console.log(fillprod(laptops));
+    });
+     return res;
+}
+console.log(fillprod(laptops));
 
 
