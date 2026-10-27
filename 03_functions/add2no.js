@@ -28,17 +28,24 @@
 //     return num1;
 // }
 // console.log(calculateCartPrice(3,4,5,5,67,8));
-const user={
-    username:"rohan",
-    price: 199
-}
-function handleObject(anyobject){
-    console.log(`username is ${anyobject.username} and price is ${anyobject.price }`);
+// const user={
+//     username:"rohan",
+//     price: 199
+// }
+// function handleObject(anyobject){
+//     console.log(`username is ${anyobject.username} and price is ${anyobject.price }`);
     
-}
-handleObject(user)
-const newarr=[200,300,400,500]
-function returnSecondValue(getarr){
-    return getarr;
-}
-console.log(returnSecondValue(newarr));
+// }
+// handleObject(user)
+// const newarr=[200,300,400,500]
+// function returnSecondValue(getarr){
+//     return getarr;
+// }
+// console.log(returnSecondValue(newarr));
+
+// function calsquare(num){
+//     return num*num;
+// }
+// console.log(calsquare(3));
+
+
